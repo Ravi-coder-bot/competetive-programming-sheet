@@ -10,7 +10,10 @@ bool mulCheck(vector<int> arr){
     if(mul==1){
         return true;
     }
-    return false;
+    else{
+        return false;
+    }
+    
 }
 
 void solve(){
@@ -44,15 +47,8 @@ void solve(){
         cout << 1 << endl;
         return;
     }
-
-    if(diff==1 || diff==2 ){
-        if(mulCheck(arr)){
+    else if(diff==1 || diff==2 ){
             cout << 1 << endl;
-        }
-        else{
-            cout << 2 << endl;
-        }
-        
         return;
     }
     else if(diff%2==0 && diff!=2){
