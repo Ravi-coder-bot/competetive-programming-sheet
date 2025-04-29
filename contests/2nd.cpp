@@ -8,16 +8,19 @@ void solve(){
     for(int i =0 ; i < n ; i++){
         cin >> arr[i];
     }
+    vector<int > temp = arr;
 
-    vector<int> temp(arr.begin(),arr.end());
+    sort(temp.begin(),temp.end());
+    cout << temp[n-1] << " ";
+    long long sum =temp[n-1] ;
+    sum = sum + arr[n-1];
 
-    for(int k =1; k <= n ; k++){
-        
 
+    for(int i=n-2; i >= 0 ; i--){
+        sum += temp[i];
+        cout << sum << " ";
     }
-    
-
-
+    cout << endl;
 }
 
 int main() {
