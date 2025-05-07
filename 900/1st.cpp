@@ -1,6 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+vector<pair<int,int>> generateMoves(int a,int b){
+    return{
+        {a,b},{a,-b},{-a,b},{-a,-b},
+        {b,a},{b,-a},{-b,a},{-b,-a}
+    };
+}
+
 void solve(){
     int a , b ;
     int xk , yk;
@@ -9,32 +16,24 @@ void solve(){
     cin >> xk >> yk ;
     cin >> xq >> yq ;
 
-    int count = 0 ;
+    auto KnightMoves = generateMoves(a,b);
+    set<pair<int,int>> forks;
 
-    if(xk-a == xq+a){
-        if(yk-a == yq+a){
-            count ++;
-        }
+    for(auto i : KnightMoves){
+        int x = xk + i.first;
+        int y = yk + i.second;
 
-        if(yk+a == yq-a){
-            count ++ ;
-        }
-        
-    }
-
-    if(xk + a == xq-a){
-        if(yk-a == yq+a){
-            count ++;
-        }
-
-        if(yk+a == yq-a){
-            count ++ ;
+        for(auto j : KnightMoves){
+            if(x+j.first == xq && y+j.second == yq){
+                forks.insert({x,y});
+                break;
+            }
         }
         
     }
 
-    cout << count << endl;
-
+    int result = forks.size();
+    cout << result << endl;
 
 }
 
