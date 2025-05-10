@@ -2,9 +2,9 @@
 using namespace std;
 
 void solve(){
-    int a , b , n;
+    long long a , b , n;
     cin >> a >> b >> n ;
-    vector<int> arr(n) ;
+    vector<long long > arr(n) ;
     for(int i =0 ; i< n; i++){
         cin >> arr[i] ;
     }
@@ -15,7 +15,7 @@ void solve(){
         }
     }
 
-    int sum = 0 ;
+    long long sum = 0 ;
     for(int i = 0 ; i < n ; i++){
         sum += arr[i] ;
     }
