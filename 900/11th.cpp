@@ -16,9 +16,6 @@ void solve(){
             arr[i]= arr[i+1];
             arr[i+1] += 1;
         }
-        else{
-            continue;
-        }
     }
 
     for(auto i : arr){
@@ -30,6 +27,7 @@ void solve(){
 
 int main() {
     int t;
+    cin >> t ;
     while(t--){
         solve();
     }
