@@ -39,18 +39,12 @@ void solve(){
     }
 
     while(n>1){
-        n = n/2;
-        if(n==3 || n==5){
-            n = n+1;
-        }
+        n = (n+1)/2;
         count++;
     }
 
     while(m>1){
-        m = m/2;
-        if(m==3 || m==5){
-            m = m+1;
-        }
+        m = (m+1)/2;
         count++;
     }
 
