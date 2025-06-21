@@ -29,7 +29,7 @@ void solve(){
             }
         }
         cout << temp << ' ';
-    }
+    }       
     cout << '\n';
 }
 
