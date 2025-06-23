@@ -2,10 +2,10 @@
 using namespace std;
 
 void solve(){
-    int n , k ;
+    long long  n , k ;
     cin >> n >> k;
 
-    vector<int> nums(n*k);
+    vector<long long> nums(n*k);
 
     for(int i =0 ; i < n*k ; i++){
         cin >> nums[i];
@@ -13,10 +13,10 @@ void solve(){
 
     sort(nums.begin(),nums.end());
 
-    int skip = n/2+1 ;
-    int sum =0 ;
+    long long  skip = n/2+1 ;
+    long long  sum =0 ;
 
-    int i = n*k;
+    long long i = n*k;
 
     while(k--){
         i -= skip;
